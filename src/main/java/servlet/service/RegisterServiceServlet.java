@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import dao.UserDao;
 import entity.User;
 
@@ -36,7 +38,7 @@ public class RegisterServiceServlet extends HttpServlet {
 		
 		User user = User.builder()
 				.username(username)
-				.password(password)
+				.password(BCrypt.hashpw(password, BCrypt.gensalt()))
 				.name(name)
 				.email(email)
 				.build();
