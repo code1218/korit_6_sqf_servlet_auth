@@ -3,7 +3,6 @@
     pageEncoding="UTF-8"%>
 <%
 	User user = (User) session.getAttribute("authentication");
-	
 %>
 <header>
 	<a href="/ssa/index"><h1 class="logo">LOGO</h1></a>

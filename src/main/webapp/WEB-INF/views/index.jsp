@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>홈</title>
 	<%@ include file="/WEB-INF/include/common_css.jsp" %>
 </head>
 <body>
